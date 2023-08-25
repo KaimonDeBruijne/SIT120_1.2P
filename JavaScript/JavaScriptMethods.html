@@ -1,0 +1,175 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Methods</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="JavaScriptMethods.css">
+
+    </head>
+    <body>
+        <div>
+            <h2>The Number Methods</h2>
+            <p>The number pi:</p>
+            <p id="pi"></p>
+            <p>Rounded to two decimal places:</p>
+            <p id="rounded"></p>
+            <p>In its exponential form to four decimal places:</p>
+            <p id="exponential"></p>
+            <p>With a precision of 4:</p>
+            <p id="precision"></p>
+            <p>As a string:</p>
+            <p id="piString"></p>
+            <p>And the value of pi:</p>
+            <p id="piValue"></p>
+        </div>
+        <div>
+            <h2>The String Methods</h2>
+            <p>My string:</p>
+            <p id="myString"></p>
+            <p>With some sliced out:</p>
+            <p id="sliced"></p>
+            <p>The length of my sting is:</p>
+            <p id="length"></p>
+            <p>In all uppercase:</p>
+            <p id="CAPS"></p>
+            <p>In all lowercase:</p>
+            <p id="lower"></p>
+            <p>And and the character at position 18:</p>
+            <p id="charAt"></p>
+        </div>
+        <div>
+            <h2>The Array Methods</h2>
+            <p>My Array:</p>
+            <p id="myArray"></p>
+            <p>My array as a string is:</p>
+            <p id="arrayString"></p>
+            <p>The length of my array is:</p>
+            <p id="arrayLength"></p>
+            <p>With the last elemet popped off:</p>
+            <p id="popped"></p>
+            <p>With a new element pushed on:</p>
+            <p id="push"></p>
+            <p>And with the everything after the index 2 sliced off:</p>
+            <p id="arraySlice"></p>
+            <p>My Number Array:</p>
+            <p id="numberArray"></p>
+            <p>The length of my number array is:</p>
+            <p id="arrayNumberLength"></p>
+        </div>
+        <div>
+            <h2>The Date Methods</h2>
+            <p>Todays date:</p>
+            <p id="theDate"></p>
+            <p>The year:</p>
+            <p id="year"></p>
+            <p>The month:</p>
+            <p id="month"></p>
+            <p>The day:</p>
+            <p id="day"></p>
+            <p>The hour:</p>
+            <p id="hour"></p>
+            <p>And the minutes:</p>
+            <p id="minutes"></p>
+        </div>
+        <div>
+            <h2>The Functions</h2>
+            <p>Temperature convert:</p>
+            <p id="temp"></p>
+            <p>Number multiplication:</p>
+            <p id="multiply"></p>
+        </div>
+    </body>
+    <script>
+        const pi = 3.1415926535897;
+        document.getElementById("pi").innerHTML = pi;
+
+        const rounded = pi.toFixed(2);
+        document.getElementById("rounded").innerHTML = rounded;
+
+        const exponential = pi.toExponential(4);
+        document.getElementById("exponential").innerHTML = exponential;
+
+        const precision = pi.toPrecision(4);
+        document.getElementById("precision").innerHTML = precision;
+
+        const piString = pi.toString();
+        document.getElementById("piString").innerHTML = piString;
+
+        const piValue = pi.toString();
+        document.getElementById("piValue").innerHTML = piValue;
+    </script>
+    <script>
+        const words = "Hello, My name is Kaimon";
+        document.getElementById("myString").innerHTML = words;
+
+        const sliced = words.slice(18, 24);
+        document.getElementById("sliced").innerHTML = sliced;
+
+        const length = words.length;
+        document.getElementById("length").innerHTML = length;
+
+        const CAPS = words.toUpperCase();
+        document.getElementById("CAPS").innerHTML = CAPS;
+
+        const lower = words.toLowerCase();
+        document.getElementById("lower").innerHTML = lower;
+
+        const charAt = words.charAt(18);
+        document.getElementById("charAt").innerHTML = charAt;
+    </script>
+    <script>
+        const myArray = ["Earth", "Fire", "Water", "Air"];
+        document.getElementById("myArray").innerHTML = myArray;
+
+        const arrayString = myArray.toString();
+        document.getElementById("arrayString").innerHTML = arrayString;
+
+        const arrayLength = myArray.length;
+        document.getElementById("arrayLength").innerHTML = arrayLength;
+
+        const popped = myArray.pop();
+        document.getElementById("popped").innerHTML = myArray;
+
+        const push = myArray.push("Lightning");
+        document.getElementById("push").innerHTML = myArray;
+
+        const arraySlice = myArray.slice(2);
+        document.getElementById("arraySlice").innerHTML = arraySlice;
+
+        const myNumberArray = ["1", "2", "3", "4", "5", "6"];
+        document.getElementById("numberArray").innerHTML = myNumberArray;
+
+        const arrayNumberLength = myNumberArray.length;
+        document.getElementById("arrayNumberLength").innerHTML = arrayNumberLength;
+    </script>
+    <script>
+        const theDate = new Date;
+        document.getElementById("theDate").innerHTML = theDate;
+
+        const year = theDate.getFullYear();
+        document.getElementById("year").innerHTML = year;
+
+        const month = theDate.getMonth();
+        document.getElementById("month").innerHTML = month;
+
+        const day = theDate.getDay();
+        document.getElementById("day").innerHTML = day;
+
+        const hour = theDate.getHours();
+        document.getElementById("hour").innerHTML = hour;
+
+        const minutes = theDate.getMinutes();
+        document.getElementById("minutes").innerHTML = minutes;
+    </script>
+    <script>
+        function tempConvert(fahrenheit) {
+            return (5/9) * (fahrenheit-32);
+        }
+        document.getElementById("temp").innerHTML = tempConvert(100);
+
+        function multiply(a, b) {
+            return a * b;
+        }
+        document.getElementById("multiply").innerHTML = multiply(5, 6);
+    </script>
+</html>
